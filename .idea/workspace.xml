@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="733ac137-a3fd-40b7-bf2d-685baf7765fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/Connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/Department.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/DeptConnection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kivy/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -54,7 +57,32 @@
     <favorites_list name="Treinaweb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Kivy/DeptBackend/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBAPI/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,6 +105,11 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hedgarbezerra &lt;hedgarbezerra35@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -91,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OPP/Moto.py" />
         <option value="$PROJECT_DIR$/OPP/Carro.py" />
         <option value="$PROJECT_DIR$/OPP/Veiculos Interface.py" />
         <option value="$PROJECT_DIR$/OPP/InterfaceVeiculos.py" />
@@ -142,6 +174,7 @@
         <option value="$PROJECT_DIR$/DBAPI/config.ini" />
         <option value="$PROJECT_DIR$/DBAPI/Connection.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Kivy/DeptBackend/main.py" />
       </list>
     </option>
   </component>
@@ -157,6 +190,10 @@
     <option name="width" value="697" />
     <option name="height" value="745" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -168,6 +205,40 @@
             <path>
               <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="DBAPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
+              <item name="Connections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
+              <item name="DeptBackend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -183,22 +254,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Kivy/DeptBackend" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\OPP" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\Connections" />
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\model" />
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\Repository" />
       <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\DBAPI" />
       <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\Collections\Listas" />
-      <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\Other" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\DeptBackend" />
+      <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\OPP" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -415,19 +489,27 @@
       <workItem from="1556215341088" duration="1041000" />
       <workItem from="1556217712160" duration="14040000" />
       <workItem from="1556549352760" duration="19661000" />
-      <workItem from="1556591851534" duration="223000" />
+      <workItem from="1556591851534" duration="1400000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1556592237533</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556592237533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114149000" />
+    <option name="totallyTimeSpent" value="115326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6421053" visible="true" weight="0.22163388" />
-      <window_info id="Structure" order="1" sideWeight="0.35639414" side_tool="true" weight="0.16717096" />
-      <window_info id="Favorites" order="2" sideWeight="0.5068182" side_tool="true" weight="0.16717096" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64028776" visible="true" weight="0.22163388" />
+      <window_info id="Structure" order="1" sideWeight="0.35971224" side_tool="true" weight="0.22163388" />
+      <window_info id="Favorites" order="2" sideWeight="0.35971224" side_tool="true" weight="0.22163388" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3268921" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.23188406" />
@@ -439,8 +521,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.23263328" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2415459" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32956383" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2415459" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32850242" />
       <window_info anchor="bottom" id="REST Client" order="13" weight="0.5056361" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -454,6 +536,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -499,21 +596,6 @@
     <SUITE FILE_PATH="coverage/Treinaweb$Pilha_Fila.coverage" NAME="Pilha_Fila Coverage Results" MODIFIED="1556250684160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Lista_dupla_ligada.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/__init__.py" />
     <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/Set.py" />
     <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/espalhamento/tabela_espalhamento.py" />
     <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/listas/lista_ligada.py" />
@@ -727,16 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBAPI/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBAPI/DeptConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -773,6 +845,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore___jb_old___">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy/Connections/Connection.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBAPI/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy/DeptBackend/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
