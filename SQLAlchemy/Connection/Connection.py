@@ -1,6 +1,7 @@
 import MySQLdb
 import configparser
 from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 
 class Connection:
@@ -17,3 +18,12 @@ class Connection:
 
         database = create_engine(f'mysql://{user}:{passwd}@{host}:{port}/{db}')
         return database
+
+    def session(self):
+        database = self.connect()
+        sessionmk = sessionmaker()
+        sessionmk.configure(bind=database)
+        session = sessionmk()
+
+        return session
+

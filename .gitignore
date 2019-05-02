@@ -103,7 +103,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-
+.idea
 __init__
 __init__.py
 *.xml

@@ -12,12 +12,11 @@ class DepConnection:
         try:
             database = Connection.connect()
             cursor = database.cursor()
-            cursor.execute("Select d.department_id, d.department_name, concat(e.first_name,' ', e.LAST_NAME)"
-                                    " from departments d left join employees e on d.MANAGER_ID = EMPLOYEE_ID "
-                                    "where d.DEPARTMENT_ID = {0}".format(self.__department.id))
+            cursor.execute("Select d.department_id, d.department_name, concat(e.first_name,' ', e.LAST_NAME),"
+                                " d.LOCATION_ID from departments d left join employees e on d.MANAGER_ID = EMPLOYEE_ID "
+                                "where d.DEPARTMENT_ID = {0}".format(self.__department.id))
             return cursor.fetchall()
         except (MySQLdb.Error, MySQLdb.Warning) as e:
-            database.open()
             return 'ERRO:' + str(e).strip('( , )')
         finally:
             database.close()
