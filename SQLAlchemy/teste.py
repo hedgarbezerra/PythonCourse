@@ -5,7 +5,7 @@ import pprint
 
 cep = '11080350'
 url = f'http://viacep.com.br/ws/{cep}/json'
-url2 = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCn09eibx2HpHTS9hXYMhHdb9H7zbmswA4'
+url2 = f'https://maps.googleapis.com/maps/api/js?key={apikey}'
 request = requests.get(url2)
 pprint.pprint(request)
 
