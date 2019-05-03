@@ -4,6 +4,6 @@ for i in lista:
     lista2.append(i*i)
 print(lista2)
 
-comprehention = [i*i for i in lista]
+comprehention = str([i*i for i in lista])
 print(comprehention)
 

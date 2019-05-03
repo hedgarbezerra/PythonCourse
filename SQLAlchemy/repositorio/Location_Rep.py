@@ -1,69 +1,61 @@
 import MySQLdb
 from sqlalchemy import exc
-from SQLAlchemy.Connection.Employee_query import EmployeeQuery
-from SQLAlchemy.dominio.db import Employee
+from SQLAlchemy.Connection.Location_query import LocationQuery
+from SQLAlchemy.dominio.db import Location
 
 
-class EmployeeRep:
+class LocationRep:
 
     @staticmethod
-    def select_one(employee_id, session):
-        query = EmployeeQuery()
+    def select(location_id, session):
+        query = LocationQuery()
         try:
-            employee = query.select_one(employee_id, session)
-            return employee
+            query.select(location_id, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             return 'ERRO: ' + str(e).strip('( , )')
         finally:
             session.close()
 
     @staticmethod
-    def select_all(session):
-        query = EmployeeQuery()
-        employees = query.select_all(session)
-        return employees
-
-    @staticmethod
-    def create(employee, session):
-        query = EmployeeQuery()
-        employee = Employee(name=employee.name, cpf=employee.cpf, email=employee.email, phone=employee.phone,
-                            job=employee.job, salary=employee.salary)
+    def create(location, session):
+        query = LocationQuery()
+        location = Location(address=location.address, postal_code=location.postal_code, city=location.city, state=location.state)
         try:
-            query.create(employee, session)
+            query.create(location, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             session.rollback()
             return 'ERRO: ' + str(e).strip('( , )')
         else:
             session.commit()
-            return 'Employee registered sucessfully!'
+            return 'Location registered sucessfully!'
         finally:
             session.close()
 
     @staticmethod
-    def update(employee_id, employee, session):
-        query = EmployeeQuery()
+    def update(location_id, location, session):
+        query = LocationQuery()
         try:
-            query.update(employee_id, employee, session)
+            query.update(location_id, location, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             session.rollback()
             return 'ERRO: ' + str(e).strip('( , )')
         else:
             session.commit()
-            return 'Employee sucessfully updated!'
+            return 'Location sucessfully updated!'
         finally:
             session.close()
 
     @staticmethod
-    def delete(employee_id, session):
-        query = EmployeeQuery()
+    def delete(location_id, session):
+        query = LocationQuery()
         try:
-            query.delete(employee_id, session)
+            query.delete(location_id, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             session.rollback()
             return 'ERRO: ' + str(e).strip('( , )')
         else:
             session.commit()
-            return 'Employee sucessfully deleted!'
+            return 'Location sucessfully deleted!'
         finally:
             session.close()
 

@@ -1,25 +1,26 @@
 class Project:
-    def __init__(self, project_id, name, manager_id, dt_start, dt_limit=None):
-        self.__project_id = project_id
+    #TODO:Constructor overload
+    def __init__(self, name, manager_id, dt_start=None, dt_limit=None):
+        self.__project_id = None
         self.__name = name
         self.__manager_id = manager_id
         self.__dt_start = dt_start
         self.__dt_limit = dt_limit
 
     @property
-    def id(self):
+    def project_id(self):
         return self.__project_id
 
-    @id.setter
-    def id(self, value):
+    @project_id.setter
+    def project_id(self, value):
         self.__project_id = value
 
     @property
-    def name(self):
+    def project_name(self):
         return self.__name
 
-    @name.setter
-    def name(self, value):
+    @project_name.setter
+    def project_name(self, value):
         self.__name = value
 
     @property

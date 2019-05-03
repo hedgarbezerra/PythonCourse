@@ -106,4 +106,6 @@ venv.bak/
 .idea
 __init__
 __init__.py
-*.xml
+/.idea
+
+

@@ -1,5 +1,7 @@
 import locale
-from _datetime import datetime
+
+from datetime import datetime
+from sqlalchemy.sql import func
 from sqlalchemy import Column, Integer, String, ForeignKey, Float, DateTime, Table, DECIMAL, Date, NUMERIC
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -18,7 +20,7 @@ class Department(Base):
     location_id = Column(Integer, ForeignKey('location.location_id'))
 
     def __repr__(self):
-        return f"Departmente #{self.department_id} nomeado: {self.department_name}"
+        return f"Departmente #{self.department_id} nomeado: {self.department_name}\n"
 
 
 class Employee(Base):
@@ -37,7 +39,7 @@ class Employee(Base):
 
     def __repr__(self):
         return f"Employee {self.name} register under #ID {self.employee_id} ~ Job: {self.job} ~" \
-            f" Salary:{locale.currency(self.salary, grouping=True)}  // Contact:{self.phone}/ {self.email}"
+            f" Salary:{locale.currency(self.salary, grouping=True)}  // Contact:{self.phone}/ {self.email}\n"
 
 
 class Location(Base):
@@ -51,22 +53,22 @@ class Location(Base):
     #department = relationship('department')
 
     def __repr__(self):
-        return f"Addres: {self.address} on {self.city}-{self.state} // Postal Code: {self.postal_code}"
+        return f"Addres: {self.address} on {self.city}-{self.state} // Postal Code: {self.postal_code}\n"
 
 
 class Project(Base):
     __tablename__ = 'project'
     project_id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String(30), nullable=False)
+    project_name = Column(String(30), nullable=False)
     manager_id = Column(Integer, ForeignKey('employee.employee_id'))
-    dt_start = Column(Date, default=datetime.today())
+    dt_start = Column(Date, default=func.sysdate())
     dt_limit = Column(Date)
 
     #emp_proj = relationship('emp_proj')
 
     def __repr__(self):
         return f'Project #{self.project_id} - {self.name} //' \
-            f' Project through {self.dt_start} ~ {self.dt_limit}'
+            f' Project through {self.dt_start} ~ {self.dt_limit}\n'
 
 
 """EmpProj = Table('emp_proj', Base.metadata,

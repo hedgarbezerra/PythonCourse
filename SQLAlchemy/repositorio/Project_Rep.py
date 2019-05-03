@@ -1,69 +1,62 @@
 import MySQLdb
 from sqlalchemy import exc
-from SQLAlchemy.Connection.Employee_query import EmployeeQuery
-from SQLAlchemy.dominio.db import Employee
+from SQLAlchemy.Connection.Project_query import ProjectQuery
+from SQLAlchemy.dominio.db import Project
 
 
-class EmployeeRep:
+class ProjectRep:
 
     @staticmethod
-    def select_one(employee_id, session):
-        query = EmployeeQuery()
+    def select(project_id, session):
+        query = ProjectQuery()
         try:
-            employee = query.select_one(employee_id, session)
-            return employee
+            query.select(project_id, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             return 'ERRO: ' + str(e).strip('( , )')
         finally:
             session.close()
 
     @staticmethod
-    def select_all(session):
-        query = EmployeeQuery()
-        employees = query.select_all(session)
-        return employees
-
-    @staticmethod
-    def create(employee, session):
-        query = EmployeeQuery()
-        employee = Employee(name=employee.name, cpf=employee.cpf, email=employee.email, phone=employee.phone,
-                            job=employee.job, salary=employee.salary)
+    def create(project, session):
+        query = ProjectQuery()
+        project = Project(project_name=project.project_name , dt_start=project.dt_start,
+                          dt_limit=project.dt_limit, manager_id=project.manager_id)
         try:
-            query.create(employee, session)
+            query.create(project, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             session.rollback()
             return 'ERRO: ' + str(e).strip('( , )')
         else:
             session.commit()
-            return 'Employee registered sucessfully!'
+            return 'Project registered sucessfully!'
         finally:
             session.close()
 
     @staticmethod
-    def update(employee_id, employee, session):
-        query = EmployeeQuery()
+    def update(project_id, project, session):
+        query = ProjectQuery()
         try:
-            query.update(employee_id, employee, session)
+            query.update(project_id, project, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             session.rollback()
             return 'ERRO: ' + str(e).strip('( , )')
         else:
             session.commit()
-            return 'Employee sucessfully updated!'
+            return 'Project sucessfully updated!'
         finally:
             session.close()
 
     @staticmethod
-    def delete(employee_id, session):
-        query = EmployeeQuery()
+    def delete(project_id, session):
+        query = ProjectQuery()
         try:
-            query.delete(employee_id, session)
+            query.delete(project_id, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
             session.rollback()
             return 'ERRO: ' + str(e).strip('( , )')
         else:
             session.commit()
-            return 'Employee sucessfully deleted!'
+            return 'Project sucessfully deleted!'
         finally:
             session.close()
 

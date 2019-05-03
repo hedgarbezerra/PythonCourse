@@ -1,17 +1,17 @@
 class Location:
-    def __init__(self, location_id, address, postal_code, city, state):
-        self.__location_id = location_id
+    def __init__(self, address, postal_code, city, state):
+        self.__location_id = None
         self.__address = address
         self.__postal_code = postal_code
         self.__city = city
         self.__state = state
 
     @property
-    def id(self):
+    def location_id(self):
         return self.__location_id
 
-    @id.setter
-    def id(self, value):
+    @location_id.setter
+    def location_id(self, value):
         self.__location_id = value
 
     @property

@@ -1,40 +1,40 @@
 class Department:
-    def __init__(self, department_id, department_name, manager_id=None, location_id=None):
-        self.__department_id = department_id
+    def __init__(self, department_name, manager_id=None, location_id=None):
+        self.__department_id = None
         self.__department_name = department_name
         self.__manager_id = manager_id
         self.__location_id = location_id
 
     @property
-    def id(self):
+    def department_id(self):
         return self.__department_id
 
-    @id.setter
-    def id(self, value):
+    @department_id.setter
+    def department_id(self, value):
         self.__department_id = value
 
     @property
-    def name(self):
+    def department_name(self):
         return self.__department_name
 
-    @name.setter
-    def name(self, value):
+    @department_name.setter
+    def department_name(self, value):
         self.__department_name = value
 
     @property
-    def manager(self):
+    def manager_id(self):
         return self.__manager_id
 
-    @manager.setter
+    @manager_id.setter
     def manager(self, value):
         self.__manager_id = value
 
     @property
-    def location(self):
+    def location_id(self):
         return self.__location_id
 
-    @location.setter
-    def location(self, value):
+    @location_id.setter
+    def location_id(self, value):
         self.__location_id = value
 
 

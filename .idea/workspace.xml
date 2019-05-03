@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="733ac137-a3fd-40b7-bf2d-685baf7765fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/Connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/Department.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/DeptConnection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/DeptBackend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kivy/__init__.py" afterDir="false" />
+    <list default="true" id="733ac137-a3fd-40b7-bf2d-685baf7765fc" name="Default Changelist" comment="Listing option added to all models">
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/Connection/Department_query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/Connection/Location_query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/Connection/Project_query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/endereco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/repositorio/Department_Rep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/repositorio/Location_Rep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/repositorio/Project_Rep.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SQLAlchemy/teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd8ffecf-8a4c-4ea6-abf3-bd03bd71ae63.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bd8ffecf-8a4c-4ea6-abf3-bd03bd71ae63.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kivy/GUI/GUI01.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kivy/GUI/GUI01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/Connection/Employee_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/Connection/Employee_query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/dominio/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/dominio/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/model/Department.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/model/Department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/model/Location.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/model/Location.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/model/Project.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/model/Project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/repositorio/Employee_Rep.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/repositorio/Employee_Rep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQLAlchemy/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/SQLAlchemy/validate.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,14 +59,13 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="MySQLLocal" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="tw_nfe: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="orm: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="MySQLLocal" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="tw_nfe: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="employees: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -58,26 +75,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Kivy/DeptBackend/main.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLAlchemy/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="1575">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLAlchemy/repositorio/Location_Rep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-147">
+              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
               <folding>
-                <element signature="e#0#56#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBAPI/main.py">
+        <entry file="file://$PROJECT_DIR$/Kivy/GUI/GUI01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLAlchemy/repositorio/Employee_Rep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLAlchemy/dominio/db.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
-              <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bd8ffecf-8a4c-4ea6-abf3-bd03bd71ae63/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -99,6 +161,15 @@
       <find>Node</find>
       <find>cursor</find>
       <find>self.__</find>
+      <find>multisample</find>
+      <find>back</find>
+      <find>backe</find>
+      <find>sample</find>
+      <find>\</find>
+      <find>E</find>
+      <find>Employee</find>
+      <find>a</find>
+      <find>employee</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\wsm\PycharmProjects\Treinaweb\OOP2_Data_Structure</dir>
@@ -111,50 +182,27 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SQLAlchemy/validate.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Node_duplo.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Lista_ligada.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Node.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Lista_dupla_ligada.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/DBAPI/DeptConnection.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Pilha.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Node.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/DBAPI/DeptConnection.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Kivy/Connections/Connection.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/OOP2_Data_Structure/Vetor.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OPP/Carro.py" />
-        <option value="$PROJECT_DIR$/OPP/Veiculos Interface.py" />
-        <option value="$PROJECT_DIR$/OPP/InterfaceVeiculos.py" />
-        <option value="$PROJECT_DIR$/OPP/Veiculo.py" />
-        <option value="$PROJECT_DIR$/OPP/Accout.py" />
-        <option value="$PROJECT_DIR$/OPP/AccountInterface.py" />
-        <option value="$PROJECT_DIR$/OPP/Account.py" />
-        <option value="$PROJECT_DIR$/OPP/User.py" />
-        <option value="$PROJECT_DIR$/OPP/FlexAccount.py" />
-        <option value="$PROJECT_DIR$/OPP/OOP1.py" />
-        <option value="$PROJECT_DIR$/OPP/GoldenAccount.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/get.http" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/qwe.html" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Vetor.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Data01.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Lista_dupla_ligada.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Scructure2/Set.py" />
-        <option value="$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/espalhamento/tabela_espalhamento.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Scructure2/Tabela_espalhamento.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Data02.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Node.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Lista_ligada.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Node_duplo.py" />
-        <option value="$PROJECT_DIR$/OOP2_Data_Structure/Pilha.py" />
-        <option value="$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/arvores/no_arvore_inteiro.py" />
-        <option value="$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/main.py" />
-        <option value="$PROJECT_DIR$/Collections/Listas.py" />
-        <option value="$PROJECT_DIR$/Collections/Listas/Listas.py" />
-        <option value="$PROJECT_DIR$/Collections/Listas/Listas_copia.py" />
-        <option value="$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py" />
-        <option value="$PROJECT_DIR$/Collections/Listas/Listas_slicing.py" />
         <option value="$PROJECT_DIR$/Collections/Listas/Listas_Array.py" />
         <option value="$PROJECT_DIR$/Collections/Iterator/Iteration.py" />
         <option value="$PROJECT_DIR$/Collections/Generator/Generator.py" />
@@ -170,11 +218,42 @@
         <option value="$PROJECT_DIR$/DB API/Connection.py" />
         <option value="$PROJECT_DIR$/OOP2_Data_Scructure2/listas/lista_ligada.py" />
         <option value="$PROJECT_DIR$/DBAPI/main.py" />
-        <option value="$PROJECT_DIR$/DBAPI/DeptConnection.py" />
         <option value="$PROJECT_DIR$/DBAPI/config.ini" />
         <option value="$PROJECT_DIR$/DBAPI/Connection.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/DBAPI/DBAPI2.py" />
+        <option value="$PROJECT_DIR$/Kivy/Connections/Connection.py" />
         <option value="$PROJECT_DIR$/Kivy/DeptBackend/main.py" />
+        <option value="$PROJECT_DIR$/Kivy/Repository/DeptConnection.py" />
+        <option value="$PROJECT_DIR$/../Treinaweb/venv/Lib/site-packages/kivy/config.py" />
+        <option value="C:/config.ini" />
+        <option value="$PROJECT_DIR$/../Treinaweb/venv/Lib/site-packages/kivy/setupconfig.py" />
+        <option value="$PROJECT_DIR$/config.ini" />
+        <option value="$PROJECT_DIR$/DBAPI/DeptConnection.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/model/employee.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/model/Emp_Proj.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/Connection/Connection.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/model/Employee.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/model/Department.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/repositorio/Department_Rep.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/Connection/Project_query.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/repositorio/Project_Rep.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/model/Location.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/validate.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bd8ffecf-8a4c-4ea6-abf3-bd03bd71ae63/console.sql" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/model/Project.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/mm.py" />
+        <option value="$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/Connection/Employee_query.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/repositorio/Employee_Rep.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/main.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/Connection/Department_query.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/Connection/Location_query.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/dominio/db.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/endereco.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/repositorio/Location_Rep.py" />
+        <option value="$PROJECT_DIR$/SQLAlchemy/teste.py" />
+        <option value="$PROJECT_DIR$/Kivy/GUI/GUI01.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -185,10 +264,10 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="454" />
-    <option name="y" value="-1" />
+    <option name="x" value="676" />
+    <option name="y" value="77" />
     <option name="width" value="697" />
-    <option name="height" value="745" />
+    <option name="height" value="661" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -209,36 +288,42 @@
             <path>
               <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
-              <item name="DBAPI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
               <item name="Kivy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
               <item name="Kivy" type="462c0819:PsiDirectoryNode" />
-              <item name="Connections" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
-              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
-              <item name="DeptBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLAlchemy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
-              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLAlchemy" type="462c0819:PsiDirectoryNode" />
+              <item name="Connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLAlchemy" type="462c0819:PsiDirectoryNode" />
+              <item name="dominio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLAlchemy" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PythonCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="PythonCourse" type="462c0819:PsiDirectoryNode" />
-              <item name="Kivy" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+              <item name="SQLAlchemy" type="462c0819:PsiDirectoryNode" />
+              <item name="repositorio" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,26 +338,29 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Kivy/DeptBackend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SQLAlchemy/model" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\SQLAlchemy\model" />
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\SQLAlchemy\Connection" />
+      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\DeptBackend" />
+      <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\OPP" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\Connections" />
       <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\model" />
       <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\Repository" />
       <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\DBAPI" />
       <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\Collections\Listas" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\wsm\PycharmProjects\PythonCourse\Kivy\DeptBackend" />
-      <recent name="C:\Users\wsm\PycharmProjects\Treinaweb\OPP" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -287,11 +375,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.GUI01">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
-    <configuration name="DBAPI1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GUI01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Treinaweb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -304,7 +392,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\wsm\PycharmProjects\Treinaweb\DBAPI\DBAPI1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Kivy/GUI/GUI01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -313,7 +401,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DBAPI2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Lista_comprehention" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Treinaweb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -326,29 +414,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\wsm\PycharmProjects\Treinaweb\DBAPI\DBAPI2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Pilha_Fila" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Treinaweb" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\wsm\PycharmProjects\Treinaweb\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Collections/Listas/Pilha_Fila.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -379,7 +445,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dict_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Treinaweb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -392,7 +458,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Collections/Dict/dict_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLAlchemy/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -401,7 +467,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Treinaweb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -414,7 +480,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBAPI/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLAlchemy/teste.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="validate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Treinaweb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\wsm\PycharmProjects\Treinaweb\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SQLAlchemy/validate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -459,11 +547,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.DBAPI2" />
-        <item itemvalue="Python.DBAPI1" />
-        <item itemvalue="Python.Pilha_Fila" />
-        <item itemvalue="Python.dict_1" />
+        <item itemvalue="Python.GUI01" />
+        <item itemvalue="Python.teste" />
+        <item itemvalue="Python.Lista_comprehention" />
+        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.validate" />
       </list>
     </recent_temporary>
   </component>
@@ -489,7 +577,16 @@
       <workItem from="1556215341088" duration="1041000" />
       <workItem from="1556217712160" duration="14040000" />
       <workItem from="1556549352760" duration="19661000" />
-      <workItem from="1556591851534" duration="1400000" />
+      <workItem from="1556591851534" duration="1712000" />
+      <workItem from="1556593871227" duration="2167000" />
+      <workItem from="1556676996134" duration="4369000" />
+      <workItem from="1556686017517" duration="1104000" />
+      <workItem from="1556722406162" duration="265000" />
+      <workItem from="1556723642841" duration="3171000" />
+      <workItem from="1556728374905" duration="36610000" />
+      <workItem from="1556808296575" duration="17123000" />
+      <workItem from="1556849162533" duration="10043000" />
+      <workItem from="1556916532304" duration="836000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1556592237533</created>
@@ -498,41 +595,95 @@
       <option name="project" value="LOCAL" />
       <updated>1556592237533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SQLAlchemy addition&#10;//Models and Connection created">
+      <created>1556740481122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556740481122</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Employee CRUD done for SQLAlchemy">
+      <created>1556809479152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556809479152</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115326000" />
+    <option name="totallyTimeSpent" value="191326000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64028776" visible="true" weight="0.22163388" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64028776" visible="true" weight="0.25416037" />
       <window_info id="Structure" order="1" sideWeight="0.35971224" side_tool="true" weight="0.22163388" />
       <window_info id="Favorites" order="2" sideWeight="0.35971224" side_tool="true" weight="0.22163388" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3268921" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.23188406" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.23188406" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39774558" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32850242" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.23263328" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2415459" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2415459" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32850242" />
       <window_info anchor="bottom" id="REST Client" order="13" weight="0.5056361" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32850242" />
+      <window_info anchor="bottom" id="SQL Generator" order="15" sideWeight="0.49848714" weight="0.32850242" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="295" height="554" id="Documentation" order="5" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
+      <window_info anchor="right" x="0" y="0" width="295" height="554" id="Documentation" order="4" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.3290469" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.64028776" visible="true" weight="0.25037822" />
+      <window_info id="Structure" order="1" sideWeight="0.35971224" side_tool="true" weight="0.22163388" />
+      <window_info id="Favorites" order="2" sideWeight="0.35971224" side_tool="true" weight="0.22163388" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3268921" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.23188406" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39774558" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32850242" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2415459" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32850242" />
+      <window_info anchor="bottom" id="REST Client" order="13" weight="0.5056361" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32850242" />
+      <window_info anchor="bottom" id="SQL Generator" order="15" sideWeight="0.49848714" weight="0.32850242" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32850242" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
+      <window_info anchor="right" x="0" y="0" width="295" height="554" id="Documentation" order="4" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.3290469" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -550,7 +701,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="SQLAlchemy addition&#10;//Models and Connection created" />
+    <MESSAGE value="Employee CRUD done for SQLAlchemy" />
+    <MESSAGE value="Listing option added to all models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listing option added to all models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,205 +725,38 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Treinaweb$Set.coverage" NAME="Set Coverage Results" MODIFIED="1556246067249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Vetor.coverage" NAME="Vetor Coverage Results" MODIFIED="1556131174916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Listas_copia.coverage" NAME="Listas_copia Coverage Results" MODIFIED="1556220415567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$OOP1.coverage" NAME="OOP1 Coverage Results" MODIFIED="1556039906917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$db.coverage" NAME="db Coverage Results" MODIFIED="1556752295621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$treino01.coverage" NAME="treino01 Coverage Results" MODIFIED="1555726476281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Data01.coverage" NAME="Data01 Coverage Results" MODIFIED="1556151802237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Listas.coverage" NAME="Listas Coverage Results" MODIFIED="1556220138877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Set_Comprehentions.coverage" NAME="Set_Comprehentions Coverage Results" MODIFIED="1556247193748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Listas_slicing.coverage" NAME="Listas_slicing Coverage Results" MODIFIED="1556222304499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$DBAPI1.coverage" NAME="DBAPI1 Coverage Results" MODIFIED="1556565597348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Data02.coverage" NAME="Data02 Coverage Results" MODIFIED="1556216442422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Listas_Array.coverage" NAME="Listas_Array Coverage Results" MODIFIED="1556224907394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Generator.coverage" NAME="Generator Coverage Results" MODIFIED="1556225750287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$main.coverage" NAME="main Coverage Results" MODIFIED="1556588795566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1556846360446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Aula01.coverage" NAME="Aula01 Coverage Results" MODIFIED="1555951282901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Tuples.coverage" NAME="Tuples Coverage Results" MODIFIED="1556243019926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$DBAPI2.coverage" NAME="DBAPI2 Coverage Results" MODIFIED="1556569643929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Ranges.coverage" NAME="Ranges Coverage Results" MODIFIED="1556245398698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Lista_comprehention.coverage" NAME="Lista_comprehention Coverage Results" MODIFIED="1556221071709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
-    <SUITE FILE_PATH="coverage/Treinaweb$Iteration.coverage" NAME="Iteration Coverage Results" MODIFIED="1556224776282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$GUI01.coverage" NAME="GUI01 Coverage Results" MODIFIED="1556917261313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$Lista_comprehention.coverage" NAME="Lista_comprehention Coverage Results" MODIFIED="1556849538695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$treino02.coverage" NAME="treino02 Coverage Results" MODIFIED="1555728051690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$dict_1.coverage" NAME="dict_1 Coverage Results" MODIFIED="1556250678798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Set.coverage" NAME="Set Coverage Results" MODIFIED="1556246067249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Listas_copia.coverage" NAME="Listas_copia Coverage Results" MODIFIED="1556220415567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$validate.coverage" NAME="validate Coverage Results" MODIFIED="1556770072018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$OOP1.coverage" NAME="OOP1 Coverage Results" MODIFIED="1556039906917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Data01.coverage" NAME="Data01 Coverage Results" MODIFIED="1556151802237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Listas.coverage" NAME="Listas Coverage Results" MODIFIED="1556220138877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1556682045796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Set_Comprehentions.coverage" NAME="Set_Comprehentions Coverage Results" MODIFIED="1556247193748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$DBAPI1.coverage" NAME="DBAPI1 Coverage Results" MODIFIED="1556565597348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Data02.coverage" NAME="Data02 Coverage Results" MODIFIED="1556216442422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Tuples.coverage" NAME="Tuples Coverage Results" MODIFIED="1556243019926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/PythonCourse$teste.coverage" NAME="teste Coverage Results" MODIFIED="1556901142127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Lista_comprehention.coverage" NAME="Lista_comprehention Coverage Results" MODIFIED="1556221071709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
+    <SUITE FILE_PATH="coverage/Treinaweb$Iteration.coverage" NAME="Iteration Coverage Results" MODIFIED="1556224776282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
     <SUITE FILE_PATH="coverage/Treinaweb$Pilha_Fila.coverage" NAME="Pilha_Fila Coverage Results" MODIFIED="1556250684160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/Set.py" />
-    <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/espalhamento/tabela_espalhamento.py" />
-    <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/listas/lista_ligada.py" />
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/Tabela_espalhamento.py" />
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/listas/no.py" />
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Data02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Lista_ligada.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Node_duplo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/listas/no_duplamente_ligada.py" />
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Pilha.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/treinaweb-python-estrutura-dados-parte-2-master/pilhas/pilha.py" />
-    <entry file="file://$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/mapas/mapa.py" />
-    <entry file="file://$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/mapas/associacao.py" />
-    <entry file="file://$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/arvores/no_arvore.py" />
-    <entry file="file://$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/arvores/no_arvore_inteiro.py" />
-    <entry file="file://$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/main.py" />
-    <entry file="file://$PROJECT_DIR$/Collections/Listas/Listas_copia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Listas/Listas_slicing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OOP2_Data_Structure/Vetor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Iterator/Iteration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Generator/Generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Tuples.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Ranges.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Listas/Listas_Array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="47" lean-forward="true" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Listas/Listas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Sets/Set.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="33" column="60" lean-forward="true" selection-start-line="33" selection-start-column="60" selection-end-line="33" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Sets/Set_Comprehentions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Listas/Pilha_Fila.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Collections/Dict/dict_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bd8ffecf-8a4c-4ea6-abf3-bd03bd71ae63/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBAPI/DBAPI2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBAPI/DBAPI1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="69" lean-forward="true" selection-start-line="2" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OPP/Account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OPP/AccountInterface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -809,16 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBAPI/DeptConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBAPI/Connection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -836,39 +813,306 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1932">
-          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore___jb_old___">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore___jb_old___" />
     <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Kivy/Connections/Connection.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/DBAPI/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy/Connections/Connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Kivy/DeptBackend/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="147">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy/Repository/DeptConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/config.ini" />
+    <entry file="file://$PROJECT_DIR$/../Treinaweb/venv/Lib/site-packages/kivy/setupconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Treinaweb/venv/Lib/site-packages/kivy/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="712" selection-start-line="702" selection-end-line="758" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/model/EmpProj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBAPI/DeptConnection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="8" column="21" selection-end-line="78" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/filas/fila.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/espalhamento/tabela_espalhamento.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/mapas/mapa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-819">
+          <caret selection-end-column="4" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/mapas/associacao.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP2_Data_Scructure2/vetores/vetor.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/Connection/Connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBAPI/DBAPI2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/repositorio/Project_Rep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/validate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/model/Employee.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/model/Project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/model/Department.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/mm.py" />
+    <entry file="file://$PROJECT_DIR$/Collections/Listas/Lista_comprehention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/model/Location.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/repositorio/Department_Rep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/Connection/Department_query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/Connection/Location_query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/Connection/Project_query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/Connection/Employee_query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/endereco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="96" selection-start-line="9" selection-start-column="96" selection-end-line="9" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/821681035/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2583">
+          <caret line="4666" column="72" lean-forward="true" selection-start-line="4666" selection-start-column="72" selection-end-line="4666" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="92" lean-forward="true" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/repositorio/Employee_Rep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/dominio/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/bd8ffecf-8a4c-4ea6-abf3-bd03bd71ae63/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLAlchemy/repositorio/Location_Rep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-147">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Kivy/GUI/GUI01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
         </state>
       </provider>
     </entry>

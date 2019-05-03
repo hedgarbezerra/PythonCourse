@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Treinaweb.iml" filepath="$PROJECT_DIR$/.idea/Treinaweb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/.idea/python-ed.iml" filepath="$PROJECT_DIR$/../treinaweb-python-estrutura-dados-parte-2-master/.idea/python-ed.iml" />
     </modules>
   </component>
 </project>
