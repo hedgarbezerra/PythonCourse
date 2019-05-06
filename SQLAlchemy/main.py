@@ -26,18 +26,22 @@ while True:
                                '3 - List all employees \n4 - Find one employee\n0 - Cancel\n'))
 
         if emp_choice == 1:
-            name = input('Enter you name:\n')
+            fname = input('Enter you first name:\n').title()
+            lname = input('Enter you last name:\n').title()
             cpf = input('Enter you CPF:\n')
-            email = input('Enter an valid email:\n')
+            if not validate.cpf_is_valid(cpf):
+                print('Invalid input, try again:\n')
+                break
+            email = input('Enter an valid email:\n').lower()
+            if not validate.email_is_valid(email):
+                print('Invalid input, try again:\n')
+                break
             phone = input('Enter your phone:\n')
-            job = input('Enter your job:\n')
+            job = input('Enter your job:\n').upper()
             salary = float(input('Enter your salary:\n'))
-
-            if validate.cpf_is_valid(cpf) and validate.email_is_valid(email):
-                emp = Employee(name=name, cpf=cpf, email=email, phone=phone, job=job, salary=salary)
-                print(emp_rep.create(emp, session))
-            else:
-                print('Email or CPF invalid, going over!\n')
+            name = fname+' '+lname
+            emp = Employee(name=name, cpf=validate.cpf_convertion(cpf), email=email, phone=phone, job=job, salary=salary)
+            print(emp_rep.create(emp, session))
 
         elif emp_choice == 2:
             emp_id = int(input('Enter the employee ID to delete::\n'))
@@ -47,8 +51,15 @@ while True:
             print(emp_rep.select_all(session))
 
         elif emp_choice == 4:
-            emp_id = int(input('Enter the employee ID to find:\n'))
-            print(emp_rep.select_one(emp_id, session))
+            find_emp = int(input('1 - Find by ID 2 - Find by CPF\n'))
+
+            if find_emp == 1:
+                emp_id = int(input('Enter the employee ID to find:\n'))
+                print(emp_rep.select_one(emp_id, session))
+
+            elif find_emp == 2:
+                emp_name = input('Enter the employee CPF to find:\n')
+                print(emp_rep.select_name(emp_name, session))
 
         else:
             print('Invalid option, exiting now...')
@@ -62,11 +73,11 @@ while True:
                                '3 - List all departments\n4 - Find one department\n0 - Cancel\n'))
 
         if dep_choice == 1:
-            name = input('Enter the department name:\n')
-            manager_id = int(input('Enter the manager ID\n'))
-            location_id = int(input('Enter the location ID\n'))
-            dep = Department(name, manager_id, location_id)
-            print(dep_rep.create(dep, session))
+            name = input('Enter the department name:\n').title()
+            manager_cpf = int(input('Enter the manager CPF:\n'))
+            postalcode = int(input('Enter the location postal code:\n'))
+            dep = Department(name)
+            print(dep_rep.create(dep, manager_cpf, postalcode, session))
 
         elif dep_choice == 2:
             dep_id = int(input('Enter the department ID\n'))
@@ -76,8 +87,14 @@ while True:
             print(dep_rep.select_all(session))
 
         elif dep_choice == 4:
-            dep_id = int(input('Enter the department ID to find:\n'))
-            print(dep_rep.select_one(dep_id, session))
+            find_dep = int(input('1 - Find by ID 2 - Find by name\n'))
+            if find_dep == 1:
+                dep_id = int(input('Enter the department ID to find:\n'))
+                print(dep_rep.select_one(dep_id, session))
+
+            elif find_dep == 2:
+                dep_name = input('Enter the department name to find:\n')
+                print(dep_rep.select_name(dep_name, session))
 
         else:
             print('Invalid option, exiting now...')
@@ -90,7 +107,7 @@ while True:
         proj_choice = int(input('1 - New Project\n2 - Delete Project\n3 -List all project'
                                 ' \n4 - Find one project\n0 - Cancel\n'))
         if proj_choice == 1:
-            name = input("Enter the project's name:\n")
+            name = input("Enter the project's name:\n").title()
             manager_id = int(input('Enter the manager ID:\n'))
             dt_limit = input('Enter the limit date(YYYY-MM-DD):\n')
             proj = Project(name=name, manager_id=manager_id, dt_limit=dt_limit)
@@ -104,8 +121,14 @@ while True:
             print(proj_rep.select_all(session))
 
         elif proj_choice == 4:
-            proj_id = int(input('Enter the project ID to find:\n'))
-            print(proj_rep.select_one(proj_id, session))
+            find_proj = int(input('1 - Find by ID 2 - Find by name\n'))
+            if find_proj == 1:
+                proj_id = int(input('Enter the project ID to find:\n'))
+                print(proj_rep.select_one(proj_id, session))
+
+            elif find_proj == 2:
+                proj_name = input('Enter the project name to find:\n')
+                print(proj_rep.select_name(proj_name, session))
 
         else:
             print('Invalid option, exiting now...')
@@ -118,10 +141,10 @@ while True:
         loc_choice = int(input('1 - New Location\n2 - Delete Location\n'
                                '3 - List all locations \n4 - Find one location\n0 - Cancel\n'))
         if loc_choice == 1:
-            address = input('Enter the Address:\n')
+            address = input('Enter the Address:\n').title()
             postal_code = input('Enter the postal code:\n')
-            city = input('Enter the city name:\n')
-            state = input('Enter the sate:\n')
+            city = input('Enter the city name:\n').title()
+            state = input('Enter the state:\n').title()
             loc = Location(address, postal_code, city, state)
             print(loc_rep.create(loc, session))
 
@@ -133,8 +156,14 @@ while True:
             print(loc_rep.select_all(session))
 
         elif loc_choice == 4:
-            loc_id = int(input('Enter the location ID to find:\n'))
-            print(loc_rep.select_one(loc_id, session))
+            find_loc = int(input('1 - Find by ID 2 - Find by name\n'))
+            if find_loc == 1:
+                loc_id = int(input('Enter the Location ID to find:\n'))
+                print(loc_rep.select_one(loc_id, session))
+
+            elif find_loc == 2:
+                loc_name = input('Enter the address to find:\n')
+                print(loc_rep.select_name(loc_name, session))
 
         else:
             print('Invalid option, exiting now...')

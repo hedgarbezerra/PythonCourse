@@ -1,5 +1,4 @@
-from SQLAlchemy.dominio import db
-from SQLAlchemy.model import Employee
+from SQLAlchemy.Connection import db
 
 
 class EmployeeQuery:
@@ -26,6 +25,11 @@ class EmployeeQuery:
     def select_all(session):
         employees = session.query(db.Employee).all()
         return employees
+
+    @staticmethod
+    def select_cpf(employee_cpf, session):
+        employee = session.query(db.Employee).filter(db.Employee.cpf == employee_cpf).one()
+        return employee
 
     @staticmethod
     def delete(employee_id, session):

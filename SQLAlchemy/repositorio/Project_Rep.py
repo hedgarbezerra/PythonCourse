@@ -1,26 +1,19 @@
 import MySQLdb
 from sqlalchemy import exc
 from SQLAlchemy.Connection.Project_query import ProjectQuery
-from SQLAlchemy.dominio.db import Project
+from SQLAlchemy.Connection.db import Project
+from SQLAlchemy.repositorio.Employee_Rep import EmployeeRep
 
 
 class ProjectRep:
 
     @staticmethod
-    def select(project_id, session):
-        query = ProjectQuery()
-        try:
-            query.select(project_id, session)
-        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
-            return 'ERRO: ' + str(e).strip('( , )')
-        finally:
-            session.close()
-
-    @staticmethod
     def create(project, session):
         query = ProjectQuery()
-        project = Project(project_name=project.project_name , dt_start=project.dt_start,
-                          dt_limit=project.dt_limit, manager_id=project.manager_id)
+        emp_rep = EmployeeRep()
+        employee = emp_rep.select_one(project.manager_id, session)
+        project = Project(project_name=project.project_name, dt_start=project.dt_start,
+                          dt_limit=project.dt_limit, manager_id=project.manager_id, employee=employee)
         try:
             query.create(project, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
@@ -60,3 +53,43 @@ class ProjectRep:
         finally:
             session.close()
 
+    @staticmethod
+    def select_one(project_id, session):
+        query = ProjectQuery()
+        try:
+            project = query.select_one(project_id, session)
+            return project
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    @staticmethod
+    def select_all(session):
+        query = ProjectQuery()
+        try:
+            projects = query.select_all(session)
+            return projects
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    @staticmethod
+    def select_name(project_name, session):
+        query = ProjectQuery()
+        try:
+            projects = query.select_name(project_name, session)
+            return projects
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    def obj_list(self, session):
+        projects = []
+        for obj in self.select_all(session):
+            project = Project(project_id=obj.project_id, project_name=obj.project_name, manager_id=obj.manager_id,
+                              dt_start=obj.dt_start, dt_limit=obj.dt_limit)
+            projects.append(project)
+        return projects

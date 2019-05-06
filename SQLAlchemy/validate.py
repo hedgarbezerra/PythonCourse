@@ -29,7 +29,7 @@ class Validate:
 
     @staticmethod
     def date_is_valid(date):
-        DATE_REGEX = re.compile('[0-9]+\[0-9]+\[0-9]')
+        DATE_REGEX = re.compile('[0-9]+-[0-9]+-[0-9]')
         #datef = datetime.datetime.strptime(date, '%Y-%m-%d').date()
         current_date = datetime.date.today()
         if DATE_REGEX.match(date) :

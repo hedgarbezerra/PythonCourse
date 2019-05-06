@@ -1,6 +1,6 @@
 class Location:
-    def __init__(self, address, postal_code, city, state):
-        self.__location_id = None
+    def __init__(self, address, postal_code, city, state, location_id=None):
+        self.__location_id = location_id
         self.__address = address
         self.__postal_code = postal_code
         self.__city = city
@@ -45,4 +45,7 @@ class Location:
     @state.setter
     def state(self, value):
         self.__state = value
+
+    def __repr__(self):
+        return f"Addres: {self.address} on {self.city}-{self.state} // Postal Code: {self.postal_code}\n"
 

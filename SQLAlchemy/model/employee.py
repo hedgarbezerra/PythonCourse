@@ -1,13 +1,11 @@
-from SQLAlchemy.dominio.db import Employee
-from SQLAlchemy.Connection.Connection import Connection
 import locale
 
 
 class Employee:
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
-    def __init__(self, name, cpf, email, phone=None, job=None, salary=None):
-        self.__employee_id = None
+    def __init__(self, name, cpf, email, phone=None, job=None, salary=None, employee_id=None):
+        self.__employee_id = employee_id
         self.__cpf = cpf
         self.__name = name
         self.__email = email
@@ -17,7 +15,7 @@ class Employee:
 
     def __repr__(self):
         return f"Employee {self.__name} register under #ID {self.__employee_id} ~ Job: {self.__job} ~" \
-            f" Salary:{locale.currency(self.__salary, grouping=True)}  // Contact:{self.__phone}/ {self.__email}"
+            f" Salary:{locale.currency(self.__salary, grouping=True)}  // Contact:{self.__phone}/ {self.__email}\n"
 
     @property
     def id(self):

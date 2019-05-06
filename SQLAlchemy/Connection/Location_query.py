@@ -1,4 +1,4 @@
-from SQLAlchemy.dominio import db
+from SQLAlchemy.Connection import db
 
 
 class LocationQuery:
@@ -29,3 +29,7 @@ class LocationQuery:
         locations = session.query(db.Location).all()
         return locations
 
+    @staticmethod
+    def select_postal_code(postal_code, session):
+        locations = session.query(db.Location).filter(db.Location.postal_code == postal_code).one()
+        return locations

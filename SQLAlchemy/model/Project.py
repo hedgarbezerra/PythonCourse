@@ -1,7 +1,7 @@
 class Project:
-    #TODO:Constructor overload
-    def __init__(self, name, manager_id, dt_start=None, dt_limit=None):
-        self.__project_id = None
+
+    def __init__(self, name, manager_id, dt_limit, dt_start=None, project_id=None):
+        self.__project_id = project_id
         self.__name = name
         self.__manager_id = manager_id
         self.__dt_start = dt_start
@@ -47,3 +47,6 @@ class Project:
     def dt_limit(self, value):
         self.__dt_limit = value
 
+    def __repr__(self):
+        return f'Project #{self.__project_id} - {self.__name} //' \
+            f' Project through {self.__dt_start} ~ {self.__dt_limit}\n'

@@ -1,7 +1,8 @@
 import MySQLdb
 from sqlalchemy import exc
 from SQLAlchemy.Connection.Employee_query import EmployeeQuery
-from SQLAlchemy.dominio.db import Employee
+from SQLAlchemy.Connection.db import Employee
+from SQLAlchemy.model.Employee import Employee as Emp
 
 
 class EmployeeRep:
@@ -18,10 +19,26 @@ class EmployeeRep:
             session.close()
 
     @staticmethod
+    def select_cpf(employee_cpf, session):
+        query = EmployeeQuery()
+        try:
+            employees = query.select_cpf(employee_cpf, session)
+            return employees
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    @staticmethod
     def select_all(session):
         query = EmployeeQuery()
-        employees = query.select_all(session)
-        return employees
+        try:
+            employees = query.select_all(session)
+            return employees
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
 
     @staticmethod
     def create(employee, session):
@@ -67,3 +84,10 @@ class EmployeeRep:
         finally:
             session.close()
 
+    def obj_list(self, session):
+        employees = []
+        for obj in self.select_all(session):
+            employee = Emp(employee_id=obj.employee_id, name=obj.name, cpf=obj.cpf, email=obj.email,
+                           phone=obj.phone, job=obj.job, salary=obj.salary)
+            employees.append(employee)
+        return employees

@@ -1,20 +1,11 @@
 import MySQLdb
 from sqlalchemy import exc
 from SQLAlchemy.Connection.Location_query import LocationQuery
-from SQLAlchemy.dominio.db import Location
+from SQLAlchemy.Connection.db import Location
+from SQLAlchemy.model.Location import Location as Loc
 
 
 class LocationRep:
-
-    @staticmethod
-    def select(location_id, session):
-        query = LocationQuery()
-        try:
-            query.select(location_id, session)
-        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
-            return 'ERRO: ' + str(e).strip('( , )')
-        finally:
-            session.close()
 
     @staticmethod
     def create(location, session):
@@ -58,4 +49,45 @@ class LocationRep:
             return 'Location sucessfully deleted!'
         finally:
             session.close()
+
+    @staticmethod
+    def select_one(location_id, session):
+        query = LocationQuery()
+        try:
+            location = query.select_one(location_id, session)
+            return location
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    @staticmethod
+    def select_postal_code(postal_code, session):
+        query = LocationQuery()
+        try:
+            location = query.select_postal_code(postal_code, session)
+            return location
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    @staticmethod
+    def select_all(session):
+        query = LocationQuery()
+        try:
+            locations = query.select_all(session)
+            return locations
+        except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:
+            return 'ERRO: ' + str(e).strip('( , )')
+        finally:
+            session.close()
+
+    def obj_list(self, session):
+        locations = []
+        for obj in self.select_all(session):
+            location = Loc(location_id= obj.location_id, address=obj.address, postal_code=obj.postal_code,
+                           city=obj.city, state=obj.state)
+            locations.append(location)
+        return locations
 

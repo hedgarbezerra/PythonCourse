@@ -1,4 +1,4 @@
-from SQLAlchemy.dominio import db
+from SQLAlchemy.Connection import db
 
 
 class ProjectQuery:
@@ -16,8 +16,19 @@ class ProjectQuery:
 
     @staticmethod
     def select_one(project_id, session):
-        session.query(db.Project).get(project_id)
+        project = session.query(db.Project).get(project_id)
+        return project
 
     @staticmethod
     def delete(project_id, session):
         session.query(db.Project).filter(db.Project.project_id == project_id).delete()
+
+    @staticmethod
+    def select_all(session):
+        projects = session.query(db.Project).all()
+        return projects
+
+    @staticmethod
+    def select_name(project_name, session):
+        projects = session.query(db.Project).filter(db.Project.project_name == project_name).all()
+        return projects

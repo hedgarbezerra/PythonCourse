@@ -1,4 +1,6 @@
-from SQLAlchemy.dominio import db
+from sqlalchemy.orm import joinedload
+
+from SQLAlchemy.Connection import db
 
 
 class DepartmentQuery:
@@ -25,5 +27,10 @@ class DepartmentQuery:
 
     @staticmethod
     def select_all(session):
-        departments = session.query(db.Department).all()
+        departments = session.query(db.Department).options(joinedload(db.Department.employee)).all()
+        return departments
+
+    @staticmethod
+    def select_name(department_name, session):
+        departments = session.query(db.Department).filter(db.Department.department_name == department_name).all()
         return departments

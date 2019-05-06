@@ -9,7 +9,7 @@ class Vetor():
 
     def __str__(self):
         # 1 2 3 4
-        return ' '.join([ str(i) for i in self.__elementos])
+        return ' '.join([str(i) for i in self.__elementos])
 
     def contem(self, elemento):
         # 1, 2, 4, 3

@@ -104,8 +104,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 .idea
-__init__
-__init__.py
 /.idea
 
 
+/SQLAlchemy/teste.py
+/SQLAlchemy/testeHTTP.py
