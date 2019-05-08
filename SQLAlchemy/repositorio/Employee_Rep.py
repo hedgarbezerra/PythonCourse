@@ -3,6 +3,7 @@ from sqlalchemy import exc
 from SQLAlchemy.Connection.Employee_query import EmployeeQuery
 from SQLAlchemy.Connection.db import Employee
 from SQLAlchemy.model.Employee import Employee as Emp
+from SQLAlchemy.Connection.Department_query import DepartmentQuery
 
 
 class EmployeeRep:
@@ -43,8 +44,10 @@ class EmployeeRep:
     @staticmethod
     def create(employee, session):
         query = EmployeeQuery()
+        dep = DepartmentQuery()
+        department = dep.select_one(employee.department_id, session)
         employee = Employee(name=employee.name, cpf=employee.cpf, email=employee.email, phone=employee.phone,
-                            job=employee.job, salary=employee.salary)
+                            job=employee.job, salary=employee.salary, department_id=employee.department_id, department=department)
         try:
             query.create(employee, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, exc.DatabaseError, MySQLdb.DatabaseError) as e:

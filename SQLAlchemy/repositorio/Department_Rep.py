@@ -17,7 +17,7 @@ class DepartmentRep:
         location = loc_rep.select_postal_code(postal_code, session)
         employee = emp_rep.select_cpf(manager_cpf, session)
         department = Department(department_name=department.department_name, manager_id=employee.employee_id,
-                                location_id=location.location_id, location=location, employee=employee)
+                                location_id=location.location_id, location=location, manager=employee)
         try:
             query.create(department, session)
         except (exc.SQLAlchemyError, exc.DBAPIError, MySQLdb.Error, MySQLdb.DatabaseError) as e:
@@ -93,7 +93,8 @@ class DepartmentRep:
     def obj_list(self, session):
         departments = []
         for obj in self.select_all(session):
-            department = Dep(department_id=obj.department_id, department_name=obj.department_name, manager_id=obj.manager_id, location_id=obj.location_id)
+            department = Dep(department_id=obj.department_id, department_name=obj.department_name,
+                             manager_id=obj.manager_id, location_id=obj.location_id)
             departments.append(department)
         return departments
 

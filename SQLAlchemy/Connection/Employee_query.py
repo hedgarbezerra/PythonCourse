@@ -1,3 +1,5 @@
+from sqlalchemy.orm import joinedload
+
 from SQLAlchemy.Connection import db
 
 
@@ -12,6 +14,7 @@ class EmployeeQuery:
         session.query(db.Employee).filter(db.Employee.employee_id == employee_id).update({'name': employee.name,
                                                                                           'cpf': employee.cpf,
                                                                                           'email': employee.email,
+                                                                                          'department_id': employee.department_id,
                                                                                           'phone': employee.phone,
                                                                                           'job': employee.job,
                                                                                           'salary': employee.salary})
@@ -23,7 +26,7 @@ class EmployeeQuery:
 
     @staticmethod
     def select_all(session):
-        employees = session.query(db.Employee).all()
+        employees = session.query(db.Employee).options(joinedload(db.Employee.department)).all()
         return employees
 
     @staticmethod

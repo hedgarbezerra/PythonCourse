@@ -27,7 +27,7 @@ class DepartmentQuery:
 
     @staticmethod
     def select_all(session):
-        departments = session.query(db.Department).options(joinedload(db.Department.employee)).all()
+        departments = session.query(db.Department).options(joinedload(db.Department.manager)).all()
         return departments
 
     @staticmethod

@@ -36,11 +36,13 @@ while True:
             if not validate.email_is_valid(email):
                 print('Invalid input, try again:\n')
                 break
+            department_id = int(input('Department ID\n'))
             phone = input('Enter your phone:\n')
             job = input('Enter your job:\n').upper()
             salary = float(input('Enter your salary:\n'))
             name = fname+' '+lname
-            emp = Employee(name=name, cpf=validate.cpf_convertion(cpf), email=email, phone=phone, job=job, salary=salary)
+            emp = Employee(name=name, cpf=validate.cpf_convertion(cpf), email=email, department_id=department_id,
+                           phone=phone, job=job, salary=salary)
             print(emp_rep.create(emp, session))
 
         elif emp_choice == 2:
