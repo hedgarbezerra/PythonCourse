@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+	<link rel="stylesheet" href="body.css">
+	<meta charset="UTF-8">
+	<title>01</title>
+</head>
+<body>
+	<div class="af">
+		<p>SASOAKSAPKSOPA</p>
+		<q>KOSAKOPSAKOAS</q>
+		<bdo dir="ltr" id="bdo">Meu Texto</bdo>
+		<br/>
+		<button onclick="clickc()">reverse</button>
+		<br/>
+</div>
+<div class="af">	
+		<progress id="p-bar" value="0" max="100" ></progress>
+		<br/>
+	<button onclick="pbar()">Progress</button>
+
+<div class="af">
+	
+	<table>
+		<thead>
+		<tr>
+			<th>Nomes</th>
+			<th>PRofessor</th>
+			<th>Datas</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+	
+		</tr>
+		</tbody>
+	</table>
+
+</div>
+
+
+
+
+
+
+
+	<script>
+		function clickc (){
+
+			a=document.getElementById('bdo').dir
+			document.getElementById('bdo').dir = 'rtl'
+
+			setTimeout(function(){
+
+    			document.getElementById('bdo').dir = 'ltr'
+
+			}, 5000);
+
+		
+		}	
+
+		function pbar () {
+			max = document.getElementById('p-bar').max
+			valor = document.getElementById('p-bar').value
+			var count = setInterval(frame, 15)
+			if(valor != 0){
+				document.getElementById('p-bar').value = 0
+			}
+			function frame () {
+
+				if (valor >= max ) {
+						clearInterval(count)
+				}
+
+				else {
+
+					valor+=1
+					document.getElementById('p-bar').value = valor;	
+				
+			}
+		}
+	}
+	
+	</script>
+</body>
+</html>
